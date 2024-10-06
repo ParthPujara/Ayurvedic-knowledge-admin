@@ -6,7 +6,7 @@ function App() {
   const [id, setId] = useState();
   const [drugValues, setDrugValues] = useState({});
   const fetchDetails = async () => {
-    const url = await fetch("http://localhost:1111/", {
+    const url = await fetch("https://ayurvedic-knowledge-backend.onrender.com/", {
       method: "GET",
     });
     const response = await url.json();
@@ -14,7 +14,7 @@ function App() {
   };
   const addDrug = async (e) => {
     e.preventDefault();
-    const url = await fetch("http://localhost:1111/", {
+    const url = await fetch("https://ayurvedic-knowledge-backend.onrender.com/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
